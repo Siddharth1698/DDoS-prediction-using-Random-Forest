@@ -3,12 +3,14 @@ from flask import Flask, request, jsonify, render_template
 import joblib
 
 app = Flask(__name__)
-model = joblib.load(open('model.pkl', 'rb'))
-
-
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+model = joblib.load(open('model.pkl', 'rb'))
+
+
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -27,4 +29,4 @@ def predict():
     return render_template('index.html', prediction_text='Category is {}'.format(output))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
