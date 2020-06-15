@@ -1,7 +1,6 @@
 absl-py==0.9.0
 alabaster==0.7.12
 alembic==0.9.9
-anaconda-client==1.7.2
 anaconda-navigator==1.9.12
 anaconda-project==0.8.3
 apipkg==1.5
